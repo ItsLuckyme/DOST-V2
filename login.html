@@ -1,0 +1,58 @@
+<?php
+session_start();
+include ("connect.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="nav-buttons">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='about.html'">About Us</button>
+      <button onclick="location.href='announcement.html'">Announcement</button>
+    </div>
+  </nav>
+
+  <header class="head">
+    <div class="header-container">
+      <div class="logos">
+        <img src="images/2. RRDIC--.png" alt="RRDIC Logo" />
+        <img src="images/1. DOST.png" alt="DOST Logo" />
+        <img src="images/3. SEARCH_logo.png" alt="SEARCH Logo" />
+      </div>
+      <div class="header-content">
+        <h3>Republic of the Philippines</h3>
+        <h1>Department of Science and Technology</h1>
+        <h3>Cordillera Administrative Region</h3>
+        <h2>REGIONAL RESEARCH, DEVELOPMENT AND INNOVATION COMMITTEE</h2>
+      </div>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Login</h2>
+      <form id="loginForm" action="loginback.php" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        
+        <button type="submit">Login</button>
+      </form>
+
+      <hr />
+
+      <p>Do not have an account yet? <a href="register.php">Register here</a></p>
+    </div>
+  </section>
+</body>
+</html>
